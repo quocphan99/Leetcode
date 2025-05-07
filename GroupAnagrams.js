@@ -10,7 +10,7 @@ var groupAnagrams = function (strs) {
     for (let i = 0; i < strs.length; i++) {
         let str = strs[i];
 
-        let hash = createHash(str);
+        let hash = createFrequencyCountList(str);
         if (!storedHash[hash]) {
             storedHash[hash] = [str];
         } else {
